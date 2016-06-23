@@ -7,6 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # Environment variables (ENV['...']) can be set in the file config/application.yml.
 puts 'DEFAULT USER'
-user = User.find_or_create_by_email :email => ENV['EMAIL'].dup, :password => ENV['PASSWORD'].dup, :password_confirmation => ENV['PASSWORD'].dup
+user = User.find_or_create_by_email :email => 'user@test.com', :password => 'changethispassword', :password_confirmation => 'changethispassword'
 puts 'user: ' << user.email
 user.save!
