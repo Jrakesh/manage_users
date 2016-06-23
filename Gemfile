@@ -18,6 +18,7 @@ group :development do
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'habtm_generator'
+  gem 'pry'
 end
 group :production do
   gem 'unicorn'
