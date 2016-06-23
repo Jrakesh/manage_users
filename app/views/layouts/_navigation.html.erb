@@ -14,9 +14,11 @@
         <li class="active">
           <%= link_to 'Home', root_path, class: 'navbar-brand' %>
         </li>
-        <li>
-          <%= link_to 'Users', users_path %>
-        </li>
+        <% if current_user %>
+          <li>
+            <%= link_to 'Users', users_path %>
+          </li>
+        <% end %>
       </ul>
       <p class="navbar-text pull-right">
         <% if user_signed_in? %>
